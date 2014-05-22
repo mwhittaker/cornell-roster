@@ -15,6 +15,9 @@ roster. Head over to the `repl` directory.
 
 From here, you can enter words and phrases.
 
+## Example ##
+![output gif](output.gif)
+
 ## Dependencies ##
 - mongodb
 - pymongo
