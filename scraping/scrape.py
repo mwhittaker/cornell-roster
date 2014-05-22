@@ -28,10 +28,14 @@ def scrape_subject(subject):
 
     for course in courses:
         course_name = course.find("div", {"class": "l1"}).get_text()
-        parts = course_name.split()
-        print "{}, {}, {}".format(parts[0], parts[1], " ".join(parts[3:]))
+        parts       = course_name.split()
+        subject     = parts[0]
+        course_id   = parts[1]
+        title       = " ".join(parts[3:]).replace('"', '\\"')
+        print '{}, {}, "{}"'.format(subject, course_id, title)
 
 def main():
+    print "subject, id, title"
     for subject in SUBJECTS:
         scrape_subject(subject)
 
